@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SLE Insurance</title>
+    <base href="/">
+    @*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">*@
+
+
+    @*<link href="https://fonts.googleapis.com/css?family=ABeeZee" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+
+        <link href="~/assets/css/aboutus.css" rel="stylesheet"/>
+        <link href="~/assets/css/Footer-Dark.css" rel="stylesheet"/>
+        <link href="~/assets/css/navbar.css" rel="stylesheet"/>
+        <link href="~/assets/css/slick-override.css" rel="stylesheet"/>
+        <link href="~/assets/css/slick-theme.css" rel="stylesheet"/>
+        <link href="~/assets/css/slick.css" rel="stylesheet"/>
+        <link href="~/assets/css/animate.css" rel="stylesheet"/>
+        <link href="~/assets/css/bootstrap-better-nav.min.css" rel="stylesheet"/>*@
+
+    @*<link rel="preload" as="font" href="/fonts/custom-font.woff2" type="font/woff2" crossorigin="anonymous">*@
+
+    <!-- inline spinner styles to be able to display spinner right away -->
+    @*<style type="text/css">
+
+            .app-loading {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 50%;
+            }
+
+                .app-loading .spinner {
+                    height: 200px;
+                    width: 200px;
+                    animation: rotate 2s linear infinite;
+                    transform-origin: center center;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+
+                    .app-loading .spinner .path {
+                        stroke-dasharray: 1, 200;
+                        stroke-dashoffset: 0;
+                        animation: dash 1.5s ease-in-out infinite;
+                        stroke-linecap: round;
+                        stroke: #ddd;
+                    }
+
+            @@keyframes rotate {
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @@keyframes dash {
+                0% {
+                    stroke-dasharray: 1, 200;
+                    stroke-dashoffset: 0;
+                }
+
+                50% {
+                    stroke-dasharray: 89, 200;
+                    stroke-dashoffset: -35px;
+                }
+
+                100% {
+                    stroke-dasharray: 89, 200;
+                    stroke-dashoffset: -124px;
+                }
+            }
+        </style>*@
+    <link href="~/clientapp/styles.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body id="mainbody">
+
+    <div class="center-item header-container">
+        <nav class="navbar navbar-light navbar-expand-md d-flex navbar-light mx-3">
+            <div class="container">
+                <a class="navbar-brand" href="#"></a>
+                <div></div><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav mr-auto">
+                        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-phone"></i>&nbsp;01993 700 335</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#covidmodal">New Broker Application</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">More Info</a>
+                            <div class="dropdown-menu animate slideIn"><a class="dropdown-item" href="#">Claims</a><a class="dropdown-item" href="#">Complaints</a><a class="dropdown-item" href="#">FAQ</a><a class="dropdown-item" href="#">Data Protection And Cookies</a></div>
+                        </li>
+                    </ul><span class="navbar-text actions"> <a class="btn action-button" role="button" href="#" data-toggle="modal" data-target="#covidmodal">Broker Login</a></span>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="d-flex flex-column justify-content-center main-title header p-3">
+        <div class="d-flex flex-column justify-content-around jumbo-header p-3" style="height: 200px;">
+            <h1 class="text-center">Sport, Leisure &amp; Event Insurance</h1>
+            <h2 class="text-center bounce animated">Our aim is to provide you with expert insurance advice.<br></h2>
+        </div>
+    </div>
+
+    @RenderBody()
+
+    <div class="footer-dark center-item">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 item"><img class="biba-image" src="assets/img/footer/biba.png"></div>
+                    <div class="col-md-4 item">
+                        <h3>One-off Events</h3>
+                        <ul>
+                            <li><a href="#">Children’s Birthday Party</a></li>
+                            <li><a href="#">Celebrations &amp; Parties</a></li>
+                            <li><a href="#">Street Party</a></li>
+                            <li><a href="#">Conferences</a></li>
+                            <li><a href="#">Exhibitors</a></li>
+                            <li><a href="#">Stallholders</a></li>
+                            <li><a href="#">Event Supplier – DJ, Band, Catering etc.</a></li>
+                            <li><a href="#">Day Cover for Inflatable Play Equipment</a></li>
+                        </ul>
+                        <br />
+                        <h3><strong>Event Insurance Covers Available are</strong><br></h3>
+                        <ul>
+                            <li><a href="#">Public Liability&nbsp;</a></li>
+                            <li><a href="#">Employers’ Liability</a></li>
+                            <li><a href="#">Event Equipment Insurance</a></li>
+                            <li><a href="#">Event Cancellation/Contingency Cover<br></a></li>
+                        </ul>
+                        <br />
+                        <h3><strong>The Covers available on the annual leisure insurance are</strong><br></h3>
+                        <ul>
+                            <li><a href="#">Public Liability&nbsp;</a></li>
+                            <li><a href="#">Employers’ Liability</a></li>
+                            <li><a href="#">Material Damage to Property&nbsp;</a></li>
+                            <li><a href="#">Business Interruption</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 item">
+                        <h3><strong>Annual Insurance – some of the Sport/Leisure business cover are</strong></h3>
+                        <ul>
+                            <li><a href="#">Bouncy Castle Insurance</a></li>
+                            <li><a href="#">Children’s Indoor Play</a></li>
+                            <li><a href="#">Activity Centre</a></li>
+                            <li><a href="#">Multiple Events / Event Organiser</a></li>
+                            <li><a href="#">Inflatable Play Equipment&nbsp;</a></li>
+                            <li><a href="#">Marquee Insurance</a></li>
+                            <li><a href="#">Gym/Fitness/Wellbeing&nbsp;</a></li>
+                            <li><a href="#">Ice Rinks</a></li>
+                            <li><a href="#">Climbing Centres</a></li>
+                            <li><a href="#">Ninja Warrior Park</a></li>
+                            <li><a href="#">Skate Parks&nbsp;</a></li>
+                            <li><a href="#">Farm Parks</a></li>
+                            <li><a href="#">Leisure Centre /Community Centre&nbsp;</a></li>
+                            <li><a href="#">Outdoor Pursuits Centre&nbsp;</a></li>
+                            <li><a href="#">Catering &amp; Mobile Catering vans/trailers</a></li>
+                            <li><a href="#">Laserquest</a></li>
+                            <li><a href="#">Arcades</a></li>
+                            <li><a href="#">Sports Clubs</a></li>
+                            <li><a href="#">Paintball Centre&nbsp;</a></li>
+                            <li><a href="#">Karting</a></li>
+                            <li><a href="#">Airsoft Site&nbsp;</a></li>
+                            <li><a href="#">4x4 / Off Road Driving</a></li>
+                            <li><a href="#">Freelance Sports Instructor</a></li>
+                            <li><a href="#">Freelance – Adventure Instructors</a></li>
+                            <li><a href="#">Cinema&nbsp;</a></li>
+                            <li><a href="#">Showmen / Fairgrounds</a></li>
+                            <li><a href="#">Motorsport</a></li>
+                            <li><a href="#">Catering</a></li>
+                            <li><a href="#">Bowling Alleys&nbsp;</a></li>
+                        </ul>
+                    </div>
+                    @*<div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>*@
+                </div>
+                <p class="copyright">SLE Insurance” is a trading name of Leisure Premium Finance Ltd. Leisure Premium Finance Limited is regulated by the Financial Conduct Authority: No. 717802.</p>
+                <p class="copyright">Maintained by&nbsp;<a class="text-white" href="http://www.whipover.com" target="_blank">whipover.com</a></p>
+            </div>
+        </footer>
+    </div>
+    <div class="modal fade" role="dialog" tabindex="-1" id="covidmodal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Notice</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                </div>
+                <div class="modal-body">
+                    <p>Temporarily suspended due to Covid. Call us for a quote now.</p>
+                    <h5>01993 700 335</h5>
+                </div>
+                <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="~/clientapp/scripts.js"></script>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+
+</html>

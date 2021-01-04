@@ -1,0 +1,85 @@
+<div class="center-item home-width">
+    <div class="tab1-annual p-2 mx-5 mt-3">
+        <h1 class="text-center">A Selection of our most Popular Annual Insurance Policies</h1>
+
+        <ngx-slick-carousel class="carousel"
+                            #slickModal="slick-carousel"
+                            [config]="slideConfig"
+                            (init)="slickInit($event)"
+                            (breakpoint)="breakpoint($event)"
+                            (afterChange)="afterChange($event)"
+                            (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let product of annualProducts" class="slide carousel-annual border rounded product-image"
+                 [@productTrigger]="product.state"
+                 (@productTrigger.done)="pulseDone($event,product)"
+                 (mouseenter)="pulse(product)"
+                 [ngStyle]="{'background': 'url(' + product.image + ')'}">
+
+                <h5 class="text-center">{{product.name}}</h5>
+            </div>
+        </ngx-slick-carousel>
+
+
+
+    </div>
+    <div class="tab1-events p-2 mx-5">
+        <h1 class="text-center">A Selection of our most Popular Event Insurance Policies</h1>
+
+        <ngx-slick-carousel class="carousel"
+                            #slickModal="slick-carousel"
+                            [config]="slideConfig"
+                            (init)="slickInit($event)"
+                            (breakpoint)="breakpoint($event)"
+                            (afterChange)="afterChange($event)"
+                            (beforeChange)="beforeChange($event)">
+            <div ngxSlickItem *ngFor="let product of eventProducts" class="slide carousel-annual border rounded product-image"
+                 [ngStyle]="{'background-image': 'url(' + product.image + ')'}"
+                 [@productTrigger]="product.state"
+                 (@productTrigger.done)="pulseDone($event,product)"
+                 (mouseenter)="pulse(product)">
+                <h5 class="text-center">{{product.name}}</h5>
+            </div>
+        </ngx-slick-carousel>
+
+
+    </div>          
+   
+</div>
+
+<div class="d-flex flex-column justify-content-around tab1-search">
+    <h1 class="text-center">Search our Insurance Policies&nbsp;</h1>
+    <div class="text-center w-100"><span class="mr-1"><i class="fa fa-search"></i></span><input type="text" class="text-input" placeholder="Type what you're looking for"></div>
+</div>
+<div class="tab1-marketing p-4">
+    <div class="jumbotron jumbo-header">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <i class="fa fa-diamond marketing-icon"></i>
+                <h1 class="text-uppercase">Specialists!</h1><a class="show-content" href="#/">Read more...</a>
+                <div class="hide-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <p>sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                    <p>aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fa fa-university marketing-icon"></i>
+                <h1 class="text-uppercase">Affordable &amp; Reliable</h1><a class="show-content" href="#/">Read more...</a>
+                <div class="hide-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <p>sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                    <p>aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</p>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <i class="fa fa-check-square-o marketing-icon"></i>
+                <h1 class="text-uppercase">peace of mind</h1><a class="show-content" href="#/">Read more...</a>
+                <div class="hide-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    <p>sed do eiusmod tempor incididunt ut labore et dolore magna</p>
+                    <p>aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
